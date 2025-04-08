@@ -1,12 +1,15 @@
-import 'package:my_ca/features/profile/domain/entities/profile.dart';
-import 'package:my_ca/features/profile/domain/repositories/profile_repository.dart';
+import 'package:dartz/dartz.dart';
+
+import '../../../../core/error/failure.dart';
+import '../entities/profile.dart';
+import '../repositories/profile_repository.dart';
 
 class GetUser {
   final ProfileRepository profileRepository;
 
   const GetUser({required this.profileRepository});
 
-  Future<Profile> execute(int id) async {
+  Future<Either<Failure, Profile>> execute(int id) async {
     return await profileRepository.getUser(id);
   }
 }
