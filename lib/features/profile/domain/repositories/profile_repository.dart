@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:my_ca/core/error/failure.dart';
+import '../../../../core/error/failure.dart';
 
 import '../entities/profile.dart';
 
